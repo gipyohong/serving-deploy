@@ -4,7 +4,7 @@
 DB 를 읽고 쓰는 함수는 모두 async def 이고, 앱의 lifespan 이 연 aiosqlite 연결(connection)을 받아 await 한다.
 aiosqlite 는 연결마다 스레드 하나에서 sqlite3 를 실행해, DB 를 쓰는 동안에도 이벤트 루프가 다른 요청을 받는다.
 SQLite 는 파일 하나에 한 번에 한 곳만 쓰므로 동시에 온 쓰기는 차례로 처리된다.
-"""
+"""#
 import hashlib
 import secrets
 from datetime import datetime, timedelta, timezone
